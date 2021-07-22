@@ -1,0 +1,157 @@
+.data {
+  text-align: left;
+  padding: 0;
+  padding-top: 18px;
+
+  width: 143px;
+}
+
+.data__heading {
+  font-family: $font-family;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.data__heading th {
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+.data__container td {
+  margin: 0;
+  padding: 0;
+
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.data__container {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.data__value {
+  text-align: right;
+  width: 60px;
+}
+
+
+
+
+
+
+
+// tablets
+@media screen and (min-width: $tablet-width) {
+
+  .data {
+    padding: 0;
+
+    width: 260px;
+  }
+
+  .data__container {
+    width: 260px;
+    min-height: 150px;
+  }
+
+  .data__container td {
+    margin: 0;
+    padding: 5px;
+    padding-top: 8px;
+
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .data__heading {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .data__heading th {
+    padding-top: 11px;
+    padding-bottom: 17px;
+
+    width: 140px;
+    text-align: center;
+
+    transform: translate(41%);
+  }
+
+  // подчеркивание
+  .data__param {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+
+      width: 250px;
+      height: 1px;
+
+      position: absolute;
+      bottom: -3px; // pp
+
+      background-color: $data-param-background;
+    }
+  }
+
+  .data__value {
+    width: 100px;
+  }
+
+}
+
+
+
+
+
+
+
+// desktops
+@media screen and (min-width: $desktop-width) {
+
+  .data {
+    width: 245px;
+  }
+
+  .data__container {
+    width: 245px;
+    min-height: 150px;
+
+    margin: 0 auto;
+  }
+
+  .data__heading th {
+    width: 140px; // сохраняет форму текста
+
+    transform: translate(37%);
+  }
+
+  .data__container td {
+    padding: 0;
+    padding-top: 8px;
+    padding-bottom: 5px;
+  }
+
+  // подчеркивание
+  .data__param {
+    width: 140px;
+
+    &::after {
+      width: 170px;
+      left: 35px;
+    }
+  }
+
+  .data__param span {
+    padding-left: 35px;  // pp
+  }
+
+  .data__value span {
+    padding-right: 38px; // pp
+  }
+
+}

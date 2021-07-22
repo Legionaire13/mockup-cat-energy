@@ -1,0 +1,154 @@
+.gift__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: $bg-others;
+  background-image: url(../img/gift-photo-mobile.jpg);
+  background-size: cover;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+
+  min-width: 280px;
+  min-height: 290px;
+
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 38px; // pp
+  margin-bottom: 35px;
+}
+
+.gift__image {
+  width: 55px;
+  height: 190px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  fill: $gift-img;
+}
+
+.gift__text {
+  font-family: $font-family-common;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+
+  width: 161px;
+
+  color: $gift-text;
+  text-align: center;
+}
+
+
+
+// responsive for mobile
+@media screen and (max-width: 767px) and (min-resolution: 1.5dppx) {
+
+  .gift__container {
+    background-image: url(../img/gift-photo-mobile@2x.jpg);
+  }
+
+}
+
+
+
+
+
+
+
+//      tablets
+@media screen and (min-width: $tablet-width) {
+
+  .gift__container {
+    flex-direction: row;
+    justify-content: flex-start;
+
+    background-image: url(../img/gift-photo-tablet.jpg);
+
+    max-width: 708px;
+    min-height: 200px;
+
+    margin: 0 auto;
+    margin-top: 60px; // pp
+    margin-bottom: 76px; // pp
+  }
+
+
+  .gift__image {
+    width: 237px;
+
+    margin-top: -10px;
+    margin-right: 185px;
+  }
+
+  .gift__text {
+    width: 161px;
+
+    text-align: left;
+    margin-top: 3px; // pp
+  }
+
+}
+
+
+
+// responsive for tablets
+@media screen and (min-width: 768px) and (max-width: 1439px) and (min-resolution: 1.5dppx) {
+
+  .gift__container {
+    background-image: url(../img/gift-photo-tablet@2x.jpg);
+  }
+
+}
+
+
+
+
+
+
+
+//      desktops
+@media screen and (min-width: $desktop-width) {
+
+  .gift__container {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    min-width: 245px;
+    min-height: 289px;
+
+    margin: 0;
+
+    background-image: url(../img/gift-photo-desktop.jpg);
+    background-size: cover;
+  }
+
+  .gift__image {
+    width: 55px;
+    height: 186px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .gift__text {
+    text-align: center;
+    margin: 0;
+  }
+
+}
+
+// responsive for desktops
+@media screen and (min-width: 1440px) and (min-resolution: 1.5dppx) {
+
+  .gift__container {
+    background-image: url(../img/gift-photo-desktop@2x.jpg);
+  }
+
+}

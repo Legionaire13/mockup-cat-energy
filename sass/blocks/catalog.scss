@@ -1,0 +1,92 @@
+.catalog__heading {
+  font-size: 36px;
+  line-height: 60px;
+
+  margin: 0;
+  padding: 15px;
+  padding-left: 20px;
+  padding-bottom: 28px;
+
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.catalog__list {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+//tablets
+@media screen and (min-width: $tablet-width) {
+
+  .catalog__heading {
+    font-size: 60px;
+    line-height: 60px;
+
+    padding: 30px;
+    padding-top: 25px;
+
+    margin: 0 auto;
+
+    min-width: 700px;
+    max-width: 1092px;
+
+    border-bottom: none;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    min-width: 700px;
+    max-width: 1152px;
+    margin: 0 auto;
+  }
+
+  .catalog__product-cards {
+    margin-bottom: 53px;
+  }
+
+}
+
+//tablets only (goods container)
+@media screen and (min-width: $tablet-width) and (max-width: 1151px) {
+  .catalog__list {
+    max-width: 768px;
+  }
+}
+
+
+
+
+
+//desktops
+@media screen and (min-width: $desktop-width) {
+
+  .catalog__heading {
+    padding-top: 51px;
+    padding-left: 110px;
+
+    max-width: 1300px;
+  }
+
+  .catalog__list {
+    padding-left: 110px;
+    padding-right: 30px;
+
+    max-width: 1300px;
+
+    justify-content: flex-start;
+  }
+
+  .catalog__product-cards {
+    margin-bottom: 53px;
+  }
+
+
+}

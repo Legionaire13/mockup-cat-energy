@@ -1,0 +1,207 @@
+.goods-to-add {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0;
+  margin: 0;
+  margin-top: 8px;
+
+  min-height: 130px;
+
+  border: none;
+
+  // greenline position
+  &::before {
+    transform: translateY(-10px);
+  }
+}
+
+.goods-to-add__headline {
+  font-size: 24px;
+  line-height: 24px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  max-width: 184px;
+
+  color: $form-text-headline;
+}
+
+.goods-to-add__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 40px;
+  margin-bottom: 18px;
+
+  min-width: 280px;
+
+  list-style: none;
+}
+
+.goods-to-add__item {
+  text-transform: uppercase;
+  font-size: 16px;
+
+  margin-bottom: 24px;
+
+  position: relative;
+
+  &:hover label::before {
+    border-color: $form-border-hover;
+  }
+}
+
+.goods-to-add__label {
+  display: flex;
+  align-items: center;
+
+  margin-left: 45px;
+
+  color: $form-text-label;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    left: -1px;
+    top: -6px;
+
+    border: 1px solid $form-border;
+  }
+}
+
+.goods-to-add__input:checked+.goods-to-add__label::after {
+  content: "";
+  display: block;
+
+  width: 21px;
+  height: 16px;
+
+  background: url(../img/tick.svg) no-repeat 50% 50%;
+
+  position: absolute;
+  left: 5px;
+  top: 2px;
+}
+
+
+
+
+
+
+//      tablets
+@media screen and (min-width: $tablet-width) {
+
+  .goods-to-add {
+    margin-top: 68px;
+
+    // зеленая полоска
+    &::before {
+      transform: translateY(-15px);
+    }
+  }
+
+  .goods-to-add__headline {
+    font-size: 36px;
+    line-height: 36px;
+
+    padding-left: 40px; // pp
+    padding-right: 40px; // pp
+
+    margin-left: 30px;
+  }
+
+  .goods-to-add__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 604px;
+
+    margin: 0 auto;
+    margin-top: 66px;
+  }
+
+  .goods-to-add__item {
+    font-size: 20px;
+
+    width: 260px;
+
+    margin-bottom: 54px;
+  }
+
+  .goods-to-add__label {
+    &::before {
+      width: 40px;
+      height: 40px;
+
+      left: -13px;
+      top: -11px;
+    }
+  }
+
+  .goods-to-add__input {
+
+    &:checked + .goods-to-add__label::after {
+      left: -2px;
+    }
+
+    &:focus + .goods-to-add__label {
+      color: #b9b9b9;
+
+      &::after {
+        opacity: .3;
+      }
+
+      &::before {
+        border-color: #ebebeb;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+//      desktops
+@media screen and (min-width: $desktop-width) {
+
+  .goods-to-add__headline {
+    margin: 0 auto;
+
+    max-width: 1385px;
+    width: 100%;
+  }
+
+  .goods-to-add__headline span {
+    padding: 0 40px;
+  }
+
+  .goods-to-add__list {
+    width: 1220px;
+
+    margin-top: 66px;
+  }
+
+  .goods-to-add__item {
+    width: 230px;
+
+    margin-left: 11px;
+  }
+
+}

@@ -1,0 +1,145 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0;
+  margin: 0;
+  margin-top: 5px;
+
+  border: none;
+
+  // greenline position
+  &::before {
+    transform: translateY(-10px);
+  }
+}
+
+.comment__headline {
+  font-size: 24px;
+  line-height: 24px;
+
+  max-width: 162px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  color: $form-text-headline;
+}
+
+.comment__textarea {
+  appearance: none;  // iOS
+  border-radius: 0;  // iOS
+  outline: none;  // iOS
+
+  min-width: 280px;
+  width: calc(100% - 40px);
+  height: 150px;
+
+  margin-top: 35px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 13px;
+  padding-top: 13px;
+
+  flex-grow: 1;
+
+  font-size: 16px;
+  line-height: 18px;
+
+  box-sizing: border-box;
+
+  border: 1px solid $form-border;
+
+  resize: none;
+
+  &:hover {
+    border-color: $form-border-hover;
+  }
+
+  &:focus {
+    border: 2px solid $form-border-focus;
+
+    transform: translate(-1px, -1px);
+  }
+
+  @include placeholder {
+    color: $form-text-placeholder;
+    text-transform: uppercase;
+  }
+}
+
+
+
+
+
+
+
+//      tablets
+@media screen and (min-width: $tablet-width) {
+
+  .comment {
+    margin-top: 50px;
+
+    // greenline position
+    &::before {
+      transform: translateY(-15px);
+    }
+  }
+
+  .comment__headline {
+    font-size: 36px;
+    line-height: 36px;
+
+    padding-left: 40px;
+    padding-right: 38px;
+
+    margin-left: 30px;
+  }
+
+  .comment__textarea {
+    display: block; // для edge
+    width: calc(100% - 136px);
+    max-width: 630px;
+    height: 175px;
+
+    margin: 0 auto;
+    margin-top: 75px; // pp
+    padding: 20px; // pp
+    padding-top: 10px; // pp
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+
+
+
+
+
+//      desktops
+@media screen and (min-width: $desktop-width) {
+
+  .comment {
+    margin-top: 30px;
+  }
+
+  .comment__headline {
+    margin: 0 auto;
+
+    max-width: 1385px;
+    width: 100%;
+
+    background-color: transparent;
+  }
+
+  .comment__headline span {
+    padding: 0 40px;
+  }
+
+  .comment__textarea {
+    max-width: 1220px;
+  }
+
+}

@@ -1,0 +1,180 @@
+.table {
+  background-color: $table-bg;
+
+  min-width: 280px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 14px;
+
+  text-align: center;
+}
+
+.table tbody {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.table tfoot {
+  display: flex;
+  justify-content: center;
+}
+
+.table tr {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+
+  position: relative;
+}
+
+.table__nums {
+  color: $font-dark;
+  font-family: $font-family;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+
+  display: block;
+  padding: 12px;
+
+  min-width: 122px;
+  min-height: 55px;
+
+  border: 1px solid $table-nums-border;
+  border-radius: 3px;
+
+  box-sizing: border-box;
+}
+
+.table__text {
+  font-size: 12px;
+  line-height: 12px;
+
+  display: block;
+
+  padding-left: 15px;
+  padding-right: 15px;
+
+  width: 70px;
+
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%);
+
+  background-color: $table-bg;
+}
+
+.table__total {
+  color: $font-dark;
+  font-family: $font-family;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+
+
+//      tablet
+@media screen and (min-width: $tablet-width) {
+
+  .table {
+    background-color: $table-bg-tablets;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 708px;
+    min-height: 85px;
+
+    margin-top: 40px;
+  }
+
+  .table tbody {
+    display: flex;
+    justify-content: space-between;
+
+    width: 365px;
+  }
+
+  .table__nums {
+    font-size: 30px;
+    line-height: 38px;
+
+    min-width: 161px;
+    min-height: 70px;
+  }
+
+  .table__text {
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: $table-bg-tablets;
+
+    padding-left: 5px;
+    padding-right: 5px;
+
+    top: 85%;
+
+    min-width: 130px; // "затрачено времени" встает в одну строку, вместо двух
+  }
+
+  .table__total {
+    font-size: 20px;
+    line-height: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .table__total td {
+    margin-top: 7px;
+  }
+
+}
+
+
+
+
+//      desktop
+@media screen and (min-width: $desktop-width) {
+
+  .table {
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+
+    background-color: $table-bg;
+
+    margin: 0;
+    margin-top: 55px;
+  }
+
+  .table__text {
+    background-color: $table-bg;
+  }
+
+  .table__total {
+    max-width: 430px;
+    flex-direction: row;
+
+    margin-top: 15px;
+  }
+
+  .table__total td {
+    text-align: left;
+    margin-right: 60px; // pp
+  }
+
+}

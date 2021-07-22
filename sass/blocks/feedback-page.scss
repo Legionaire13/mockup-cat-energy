@@ -1,0 +1,35 @@
+//       mob and tablets
+.feedback-page .address {
+  background-color: $bg-secondary;
+}
+
+
+
+//      desktops
+@media screen and (min-width: $desktop-width) {
+
+  .feedback-page .address {
+    background-color: $bg-primary;
+  }
+
+  .feedback-page .page-header {
+
+    &::after {
+      content: unset;
+    }
+
+  }
+
+  .feedback-page .main-nav__item a {
+    color: $font-dark;
+  }
+
+  .feedback-page .main-nav__item--active a {
+    border-bottom: 2px solid $bg-others;
+  }
+
+  .feedback-page .address {
+    background-color: $bg-primary;
+  }
+
+}

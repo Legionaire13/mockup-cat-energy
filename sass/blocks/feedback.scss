@@ -1,0 +1,152 @@
+.feedback {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-family;
+
+  margin-bottom: 30px;
+}
+
+.feedback__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &--required {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.feedback__heading {
+  font-size: 36px;
+  line-height: 60px;
+
+  margin: 15px;
+  margin-left: 20px;
+}
+
+.feedback__proposal {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-family;
+  color: $font-dark;
+
+  text-transform: uppercase;
+
+  margin: 20px;
+  margin-top: 10px;
+
+  display: inline-block;
+}
+
+.feedback__required {
+  width: 320px;
+  margin: 0;
+
+  text-align: center;
+
+  font-family: $font-family-common;
+}
+
+
+
+
+//      tablets
+@media screen and (min-width: $tablet-width) {
+
+  .feedback {
+    margin-bottom: 72px;
+  }
+
+  .feedback__wrapper {
+    align-items: center;
+  }
+
+  .feedback__heading {
+    font-size: 60px;
+    line-height: 60px;
+
+    padding: 0;
+    margin: 25px;
+    margin-left: 30px;
+  }
+
+  .feedback__proposal {
+    font-size: 20px;
+    line-height: 30px;
+
+    margin: 25px;
+    margin-top: 31px;
+    margin-left: 30px;
+    padding-left: 40px;
+  }
+
+  .feedback__wrapper {
+    &--required {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+
+      max-width: 626px;
+
+      margin: 0 auto;
+      margin-top: 12px;
+    }
+  }
+
+  .feedback__required {
+    width: 282px;
+
+    font-size: 16px;
+    line-height: 16px;
+
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+//      desktops
+@media screen and (min-width: $desktop-width) {
+
+  .feedback__heading {
+    margin: 53px auto; // pp
+    width: 1220px;
+  }
+
+  .feedback__proposal {
+    display: block;
+    width: 1258px;
+    margin: 0 auto;
+    // margin-top: 3px; // pp
+  }
+
+
+  .feedback__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    max-width: 1220px;
+    margin: 0 auto;
+    margin-top: 54px;
+
+    &--required {
+      max-width: 1220px;
+
+      margin-top: 20px;
+      margin-bottom: 82px;
+    }
+  }
+
+  .feedback__required {
+    width: 568px;
+    height: 20px;
+
+    padding: 2px;
+  }
+}
